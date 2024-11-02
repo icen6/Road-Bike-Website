@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="SepedaMiniIcon.jpg" />
+    <link rel="shortcut icon" href="img/SepedaMiniIcon.jpg" />
   </head>
   <body>
     <nav class="navbar">
@@ -29,8 +29,9 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#Bikes" id="shopping-cart"
+          ><i data-feather="shopping-cart"></i
+        ></a>
         <a href="#" id="Tripple-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
@@ -39,7 +40,7 @@
       <main class="content">
         <h1>Welcome to <span>YourTraveling.</span></h1>
         <p>Let's Traveling with your Road Bikes</p>
-        <a href="#" class="cta">Beli Sekarang</a>
+        <a href="#Bikes" class="cta">Buy Now</a>
       </main>
     </section>
 
@@ -48,22 +49,14 @@
 
       <div class="row">
         <div class="about-img">
-          <img src="Sepeda15.jpg" alt="About US" />
+          <img src="img/Sepeda15.jpg" alt="About US" />
         </div>
 
         <div class="content">
-          <h3>Kenapa memilih Road Bike kami ?</h3>
+          <h3>Why you have to choose our Road Bike ?</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur eius perferendis id voluptatem corporis sapiente illum
-            cupiditate, nisi ab adipisci, asperiores placeat modi deserunt
-            facilis, laudantium sint animi magnam sit.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur eius perferendis id voluptatem corporis sapiente illum
-            cupiditate, nisi ab adipisci, asperiores placeat modi deserunt
-            facilis, laudantium sint animi magnam sit.
+            Our products have unique design advantages and have excellent
+            component quality. As well as affordable prices
           </p>
         </div>
       </div>
@@ -72,40 +65,84 @@
     <section id="Bikes" class="Bikes">
       <h2><span>Catalog</span> Of Our Bikes</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-        maiores possimus. Necessitatibus cumque debitis voluptas.
+        In our store, we already have 2 Bicycle Models that are currently
+        popular with bicycle lovers
       </p>
 
       <div class="row">
         <div class="Bikes-card">
-          <img src="TrekRB.png" alt="TrekRB" class="Bikes-card-img" />
+          <img src="img/TrekRB.png" alt="TrekRB" class="Bikes-card-img" />
           <h3 class="Bikes-card-tittle">- Trek Road Bike -</h3>
           <p class="Bikes-card-price">IDR 120 Juta</p>
+          <button class="btn-buy" onclick="openBuyForm('Trek Road Bike')">
+            Buy
+          </button>
         </div>
         <div class="Bikes-card">
-          <img src="GiantRB.png" alt="GiantRB" class="Bikes-card-img" />
+          <img src="img/GiantRB.png" alt="GiantRB" class="Bikes-card-img" />
           <h3 class="Bikes-card-tittle">- Giant Road Bike -</h3>
           <p class="Bikes-card-price">IDR 150 Juta</p>
+          <button class="btn-buy" onclick="openBuyForm('Giant Road Bike')">
+            Buy
+          </button>
         </div>
         <div class="Bikes-card">
-          <img src="PinarelloRB.png" alt="PinarelloRB" class="Bikes-card-img" />
+          <img
+            src="img/PinarelloRB.png"
+            alt="PinarelloRB"
+            class="Bikes-card-img"
+          />
           <h3 class="Bikes-card-tittle">- Pinarello Road Bike -</h3>
           <p class="Bikes-card-price">IDR 180 Juta</p>
+          <button class="btn-buy" onclick="openBuyForm('Pinarello Road Bike')">
+            Buy
+          </button>
         </div>
       </div>
     </section>
 
+    <div id="buyFormModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeBuyForm()">&times;</span>
+        <h2>Purchase Form</h2>
+        <p id="productName"></p>
+        <form action="">
+          <div class="input-group">
+            <label for="buyerName">Name</label>
+            <input type="text" id="Buyer's Name" required />
+          </div>
+          <div class="input-group">
+            <label for="buyerEmail">Email</label>
+            <input type="email" id="Buyer's Email" required />
+          </div>
+          <div class="input-group">
+            <label for="buyerPhone">Number</label>
+            <input type="tel" id="Buyer's Phone" required />
+          </div>
+          <button type="submit" class="btn-submit">Send</button>
+        </form>
+      </div>
+    </div>
+
     <section id="Contact" class="Contact">
       <h2>Contact US</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quod!
+        If you have any questions, you can directly fill out the form below!.
       </p>
 
       <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15864.749206835282!2d107.09152595!3d-6.2390272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1730543127677!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
         <form action="">
           <div class="input-group">
             <i data-feather="users"></i>
-            <input type="text" placeholder="Nama" />
+            <input type="text" placeholder="Name" />
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
@@ -113,7 +150,7 @@
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="No Hp" />
+            <input type="text" placeholder="Number" />
           </div>
           <button type="submit" class="btn">Send a Message</button>
         </form>
@@ -122,9 +159,12 @@
 
     <footer>
       <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="https://www.instagram.com/ican.6/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://www.facebook.com/Ican.Cibe"
+          ><i data-feather="facebook"></i
+        ></a>
       </div>
 
       <div class="links">

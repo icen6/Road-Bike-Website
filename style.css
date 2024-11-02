@@ -216,7 +216,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(Sepeda13.avif);
+  background-image: url(img/Sepeda13.avif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -309,14 +309,16 @@ body {
 
 .about .row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 100;
   line-height: 1.6;
 }
 
 .Bikes {
-  color: #000;
+  color: #fff;
   padding: 8rem 7% 1.4rem;
+  background-color: #000000;
+  padding-bottom: 8rem;
 }
 
 .Bikes h2 {
@@ -342,7 +344,8 @@ body {
 
 .Bikes .row {
   display: flex;
-  margin-top: 5rem;
+  flex-wrap: wrap;
+  margin-top: 3.5rem;
   justify-content: center;
 }
 
@@ -356,22 +359,114 @@ body {
 }
 
 .Bikes .row .Bikes-card img {
-  width: 85%;
+  width: 80%;
+  border-radius: 10%;
+}
+
+.btn-buy {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2c96dc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #1a6ca8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal .modal-content h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.modal .modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal .modal-content .input-group {
+  margin-bottom: 1.5rem;
+}
+
+.modal .modal-content .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.modal .modal-content .input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal .btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2c96dc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal .btn-submit:hover {
+  background-color: #1a6ca8;
 }
 
 .Contact {
   padding: 8rem 7% 1.4rem;
   color: #000;
+  background-color: #1a1a2e;
+  padding-bottom: 3rem;
 }
 
 .Contact h2 {
   text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffcc29;
 }
 
 .Contact p {
   text-align: center;
+  color: #bdbdbd;
   max-width: 30rem;
   margin: auto;
   font-weight: 100;
@@ -379,12 +474,20 @@ body {
 }
 
 .Contact .row {
+  display: flex;
   margin-top: 2rem;
-  background-color: #984009;
+  background-color: #222;
+}
+
+.Contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .Contact .row form {
   flex: 1 1 45rem;
+  background-color: #2f2f3f;
   padding: 5rem 2rem;
   text-align: center;
 }
@@ -403,7 +506,7 @@ body {
   padding: 2rem;
   font-size: 1.7rem;
   background: none;
-  color: #000;
+  color: #ffcc29;
 }
 
 .Contact .row form .btn {
@@ -412,7 +515,7 @@ body {
   padding: 1rem 3rem;
   font-size: 1.7rem;
   color: #fff;
-  background-color: #3fd52e;
+  background-color: #1a1a2e;
   cursor: pointer;
 }
 
@@ -420,9 +523,7 @@ footer {
   color: #ffffff;
   background-color: #6c5a6f;
   text-align: center;
-  padding: 1rem 0 3rem;
-  margin-top: 3rem;
-  padding-bottom: 1rem 0;
+  padding: 1rem 0 1.8rem;
 }
 
 footer .socials {

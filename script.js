@@ -10,3 +10,21 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+
+// Fungsi untuk membuka form pembelian dan menampilkan nama produk
+function openBuyForm(productName) {
+  document.getElementById("buyFormModal").style.display = "block";
+  document.getElementById("productName").textContent =
+    "Prodcut: " + productName;
+}
+
+// Fungsi untuk menutup form pembelian
+function closeBuyForm() {
+  document.getElementById("buyFormModal").style.display = "none";
+}
+
+// Menutup form pembelian ketika klik di luar modal
+window.onclick = function (event) {
+  const modal = document.getElementById("buyFormModal");
+  if (event.target == modal) modal.style.display = "none";
+};
