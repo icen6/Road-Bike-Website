@@ -11,6 +11,8 @@ document.addEventListener("click", function (e) {
   }
 });
 
+feather.replace();
+
 // Fungsi untuk membuka form pembelian dan menampilkan nama produk
 function openBuyForm(productName) {
   document.getElementById("buyFormModal").style.display = "block";
